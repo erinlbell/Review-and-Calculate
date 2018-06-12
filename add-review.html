@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar transparent>
+    <ion-title><h3 style="color:darkred;text-align:center">Add New Comment</h3></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close" style="color:darkred"></ion-icon></button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-color: #000 ">
+  <ion-list>
+		<ion-item>
+		  <ion-label >Title</ion-label>
+		  <ion-input [(ngModel)]="title" type="text" style="color:white"></ion-input>
+		</ion-item>
+
+		<ion-item>
+		  <ion-label >Message</ion-label>
+		  <ion-textarea [(ngModel)]="description"  style="color:white"></ion-textarea>
+		</ion-item>
+
+		<ion-item>
+		  <ion-range min="0" max="100" pin="true" [(ngModel)]="rating">
+			<ion-icon style="color:red" range-left name="sad"></ion-icon>
+			<ion-icon style="color:yellow"  range-right name="happy"></ion-icon>
+		  </ion-range>
+		</ion-item>
+  </ion-list>
+  <button ion-button full color="secondary" (click)="save()">Save</button>
+</ion-content>

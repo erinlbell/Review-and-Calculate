@@ -1,0 +1,85 @@
+page-calculate 
+{	
+	.content{
+		background-color: white;	
+	}
+
+	ion-card-content{
+		color:white !important;
+	}
+
+	ion-card-header {
+		background-color:darkred;
+		color:white !important;
+	}
+
+	ion-label {
+		color: darkred !important;
+		font-weight:bold;
+	}
+
+	input {
+		color: white;  /* change [input cursor color] by this*/
+		text-shadow: 0px 0px 0px white; /* change [input font] by this*/
+		-webkit-text-fill-color: transparent;
+	}
+
+	p {
+		color:white !important;
+	}
+
+	.add {
+		background-color: #E88F7D;
+		color: darkred !important;
+	}
+
+	.sub {
+		background-color: lightgreen;
+		color: darkred !important;
+	}
+
+	.mult {
+		background-color: lightyellow;
+		color: darkred !important;
+	}
+
+	.divi {
+		background-color: #CFCFFC;
+		color: darkred !important;
+	}
+	
+	.abs {
+		background-color: red;
+		color: darkred !important;
+	}
+	
+	.abs2 {
+		background-color: darkblue;
+		color: white !important;
+	}
+
+	.sod {
+		background-color: #D4F7F7;
+		color: darkred !important;
+	}
+	.sod2 {
+		background-color: aqua;
+		color: white !important;
+	}
+
+	.square1 {
+		background-color: pink;
+	    color: darkred !important;
+	}
+	
+	.square2 {
+		background-color: darkgreen;
+	    color: white !important;
+	}
+	
+	.dab {
+		background-color: black;
+	    color: white !important;
+	}
+
+}

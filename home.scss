@@ -1,0 +1,60 @@
+.ios, .md {
+ 
+  page-home {
+ 
+    ion-item {
+      border-bottom: none !important;
+    }
+ 
+    ion-label {
+      white-space: normal;
+    }
+ 
+    ion-item-sliding {
+      margin: 10px;
+    }
+	
+	p {
+		color:white;
+	}
+	
+	ion-card-title{
+		color: darkred;
+	}
+	
+	.iconleft{
+		background:none;
+		color:white;
+		font-size:15px;
+	}
+	
+	.iconright{
+		background:none;
+		border:none;
+		color:white;
+		font-size:20px;
+		position:absolute;
+		right:0;
+		top:15px;
+		
+	}
+	
+	h4{
+		text-align: center;
+		color:black;
+		text-shadow: 1px 1px white;
+	}
+	
+	div{
+		font-size:12px;
+	}
+	
+	.img1{
+	
+		width: 1000px;
+		height:500px;
+	}
+ 
+  }
+ 
+}

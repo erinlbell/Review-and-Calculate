@@ -1,0 +1,71 @@
+<ion-header>
+	<ion-navbar color="secondary">
+    	<ion-title>
+    		Math Calculations
+    	</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="close()"><ion-icon name="close" style="color:white"></ion-icon></button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+		<ion-item>
+			<ion-label fixed>Input Value 1:</ion-label>
+			<ion-input type="number" [(ngModel)]="_firstNumber"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed>Input Value 2:</ion-label>
+			<ion-input type="number" [(ngModel)]="_secondNumber"></ion-input>
+		</ion-item>
+	</ion-list>
+
+	<button ion-button outline (click)="AdditionFunction()" class="add">Addition</button>
+	<button ion-button outline (click)="SubtractionFunction()" class="sub">Subtraction</button>
+	<button ion-button outline (click)="MultiplicationFunction()" class="mult">Multiplication</button>
+	<button ion-button outline (click)="DivisionFunction()" class="divi">Divide</button>
+	<button ion-button outline (click)="SquareFunction()" class="square1">Square Value 1</button>
+	<button ion-button outline (click)="AbsoluteValueFunction()" class="abs">Absolute Value 1</button>
+	<button ion-button outline (click)="TripleSumFunction()" class="">Triple Sum</button><br/>
+	<button ion-button outline (click)="SumOfDigitsFunction()" class="sod">Find Sum of Digits of Value 1</button>
+	<button ion-button outline (click)="TripleAbsFunction()" class="dab">Double Absolute Value of the difference</button><br/>
+	
+	<button ion-button outline (click)="Square2Function()" class="square2">Square Value 2</button>
+	<button ion-button outline (click)="AbsoluteValue2Function()" class="abs2">Absolute Value 2</button>
+	<button ion-button outline (click)="SumOfDigits2Function()" class="sod2">Find Sum of Digits of Value 2</button>
+
+	<ion-card>
+	    <ion-card-header>
+	    	Calculator Results: <p> Solution 1: {{_solution}} <br/>
+							Solution 2: {{_solution2}} </p>
+	    </ion-card-header>
+		
+		<ion-card-content>
+	    	<p> First Number is... {{_firstNumber}} </p>			
+	        <p> Second Number is... {{_secondNumber}} </p>	
+			<br/>
+			<hr style="border-bottom: 1px solid #ccc;"/>			
+		    <p> Addition:  {{ GetInstantAddition() }} </p>
+			<p> Subtraction:  {{ GetInstantSubtraction() }} </p>	
+			<p> Multiplication:  {{ GetInstantMultiplication() }} </p>	
+			<p> Division:  {{ GetInstantDivision() }} </p>	
+			<p> Square Value 1:  {{ GetInstantSquare1() }} </p>	
+			<p> Square Value 2:  {{ GetInstantSquare2() }} </p>	
+			<p> Absolute Value 1:  {{ GetInstantAbsoluteValue1() }} </p>	
+			<p> Absolute Value 2:  {{ GetInstantAbsoluteValue2() }} </p>	
+			<!-- <p> Total Sum Of Digits of Value 1:  {{ GetInstantSumOfDigits1() }} </p> !-->
+			<!-- <p> Total Sum Of Digits of Value 2:  {{ GetInstantSumOfDigits2() }} </p> !-->				
+			<p> Double absolute value of the difference:  {{ GetInstantTripleAbs() }} </p>	
+			<!--<p> Instant Total Print Odd Numbers:  {{ GetInstantPrintOddNumbers() }} </p>	
+			 
+			 <div *ngFor="let d of data; let i = index" >
+				<div class="row" *ngIf="i % 2 === 0">
+				  <div class="col-xs-4 well">{{data[i]}}</div>
+				</div>
+			</div>	
+			!-->	
+	    </ion-card-content>		
+	</ion-card>
+</ion-content>
+

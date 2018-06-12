@@ -1,0 +1,37 @@
+<ion-header>
+	<ion-navbar color="secondary">
+    	<ion-title>
+    		Temperature Conversions
+    	</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="close()"><ion-icon name="close" style="color:white"></ion-icon></button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+	    <ion-item>
+	        <ion-label fixed>Input Temperature: °</ion-label>
+	        <ion-input  type="number"  [(ngModel)]="_firstNumber "></ion-input>
+	    </ion-item>
+	</ion-list>
+	
+	<button ion-button outline (click)="ConvertCelsiusFunction()" class="add">Celsius</button>
+	<button ion-button outline (click)="ConvertFahrenheitFunction()" class="add">Fahrenheit</button>
+	<button ion-button outline (click)="ConvertKelvinFunction()" class="add">Kelvin</button>
+	
+	<ion-card>
+	    <ion-card-header>
+	    	Temperature Conversion Results: <p> {{_firstNumber }}°: {{_solution}} <br/>
+	    </ion-card-header>
+		
+		<ion-card-content>
+			<hr style="border-bottom: 1px solid #ccc;"/>	
+			<p> {{_firstNumber}} ° Celsius    : {{ GetInstantConvertCelsius () }} </p>	
+			<p> {{_firstNumber}} ° Fahrenheit : {{ GetInstantConvertFahrenheit () }} </p>	
+			<p> {{_firstNumber}} ° Kelvin     : {{ GetInstantConvertKelvin () }} </p>	
+	    </ion-card-content>		
+	</ion-card>
+</ion-content>
+

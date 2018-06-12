@@ -1,0 +1,27 @@
+page-manipulate{
+		
+		.content{
+			background-color: white;
+			
+		}
+		
+		ion-card-content{
+			color:white !important;
+		}
+		
+		ion-card-header {
+			background-color:darkred;
+			color:white !important;
+		}
+		
+		input {
+			color: white;  /* change [input cursor color] by this*/
+			text-shadow: 0px 0px 0px white; /* change [input font] by this*/
+			-webkit-text-fill-color: transparent;
+		}
+		
+		p {
+			color:white !important;
+		}
+
+}

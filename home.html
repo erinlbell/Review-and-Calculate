@@ -1,0 +1,157 @@
+<ion-header>
+  <ion-navbar color="secondary">
+		<ion-title>
+			<h4> askLW</h4>
+		</ion-title>
+		<button menuToggle left class="iconleft">
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<button class="iconright" (click)="addReview()">
+			<ion-icon name="chatboxes"></ion-icon>
+		</button>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>	
+	<ion-grid>
+		<ion-row>
+			<ion-col col-33>
+				<ion-card (click)="calculate()">
+					<img src="assets/images/math.jpg" class="img1"/>
+					
+					<ion-card-content>
+						<ion-card-title>
+							Math Calculations
+						</ion-card-title>
+						<p>
+								<li>Add two numbers.</li>
+								<li>Subtract two numbers.</li>
+								<li>Multiply two numbers.</li>
+								<li>Divide two numbers.</li>
+								<li>Get the square.</li>
+								<li>Return the absolute value.</li>
+								<li>Print The Sum of Digits.</li>
+								<li>Triple the sum of two numbers.</li>
+								<li>Find double the absolute value of the difference.</li>
+								<li>Check for positive and negative values.</li>
+								<li>Find the average of given numbers.</li>
+								<li>Check if two numbers are equal.</li>
+						</p>
+					</ion-card-content>
+					
+				</ion-card>	
+				
+				<ion-row>
+						<ion-col>
+							<button (click)="calculate()" ion-button icon-left clear small class="iconleft">
+								<ion-icon name="settings"></ion-icon>
+								<div>11 Calculations</div>
+							</button>
+						</ion-col>
+						<ion-col>
+							<button ion-button icon-left clear small class="iconleft"  (click)="addReview()">
+								<ion-icon name="text"></ion-icon>
+								<div>40 Comments</div>
+							</button>
+						</ion-col>
+					</ion-row>
+			</ion-col>
+
+			<ion-col col-33>
+				<ion-card (click)="manipulate()">
+					<img src="assets/images/words.jpg" class="img1"/>
+					<ion-card-content>
+						<ion-card-title>
+							String Manipulations
+						</ion-card-title>
+						<p>
+								<li>Concatenate two words together.</li>
+								<li>Find the longest word in the string.</li>
+								<li>Convert sentence to a list.</li>
+								<li>Convert String to lowercase.</li>
+								<li>Convert String to uppercase.</li>
+								<li>Swap the first and last characters of string.</li>
+						</p>
+					</ion-card-content>
+				</ion-card>	<br/><br/><br/><br/>
+					
+				<ion-row>
+						<ion-col>
+								<button (click)="manipulate()" ion-button icon-left clear small class="iconleft">
+									<ion-icon name="settings"></ion-icon>
+									<div>6 Manipulations</div>
+								</button>
+						</ion-col>
+						<ion-col>
+								<button ion-button icon-left clear small class="iconleft"  (click)="addReview()">
+									<ion-icon name="text"></ion-icon>
+									<div>40 Comments</div>
+								</button>
+						</ion-col>
+				</ion-row>
+			</ion-col>
+			
+			<ion-col col-33>
+				<ion-card (click)="convert()">
+					<img src="assets/images/temperature.jpg" class="img1" />
+					<ion-card-content>
+						<ion-card-title>
+							Temperature Conversions
+						</ion-card-title>
+						<p>
+								<li>Converts Celsius to Fahrenheit.</li>
+								<li>Converts Celsius to Kelvin.</li>
+								<li>Converts Fahrenheit to Celsius.</li>
+								<li>Converts Fahrenheit to Kelvin.</li>
+								<li>Converts Kelvin to Celsius.</li>
+								<li>Converts Kelvin to Fahrenheit.</li>
+								
+						</p>
+					</ion-card-content>
+				</ion-card>	<br/><br/><br/><br/><br/><br/><br/><br/>
+				
+						<ion-row>
+							<ion-col>
+								<button (click)="convert()" ion-button icon-left clear small class="iconleft">
+									<ion-icon name="settings"></ion-icon>
+									<div >2 Conversions</div>
+								</button>
+							</ion-col>
+							<ion-col>
+								<button ion-button icon-left clear small class="iconleft"  (click)="addReview()">
+									<ion-icon name="text"></ion-icon>
+									<div>40 Comments</div>
+								</button>
+							</ion-col>
+						</ion-row>
+			</ion-col>		
+		</ion-row>
+	</ion-grid>						
+			<ion-list no-lines>
+				<ion-item-sliding *ngFor="let review of reviews">
+				
+					<ion-item>
+					<h4 style="text-align:left !important">Comments</h4>
+						<ion-avatar item-left>
+						  <img src="https://api.adorable.io/avatars/75/{{review.title}}">
+						</ion-avatar>
+
+						<h2 style="color:white">{{review.title}}</h2>
+						<p>{{review.description}}</p>
+						<ion-icon *ngIf="review.rating < 50" danger name="sad"></ion-icon>
+						<ion-icon *ngIf="review.rating >= 50" secondary name="happy"></ion-icon>
+						{{review.rating}}
+					</ion-item>
+
+					<ion-item-options>
+						<button ion-button color="danger" (click)="deleteReview(review)">
+						  <ion-icon name="trash"></ion-icon>
+						  Delete
+						</button>
+					</ion-item-options>
+				</ion-item-sliding>
+		    </ion-list>
+       <button ion-button block style="background-color:darkred;height:50px" (click)="calculate()">Start New Calculation</button>  
+</ion-content>
+
+

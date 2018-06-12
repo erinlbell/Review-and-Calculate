@@ -1,0 +1,55 @@
+<ion-header>
+	<ion-navbar color="secondary">
+    	<ion-title>
+    		String Manipulations
+    	</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="close()"><ion-icon name="close" style="color:white"></ion-icon></button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+	    <ion-item>
+	        <ion-label fixed>Input String 1:</ion-label>
+	        <ion-input  [(ngModel)]="_firstString"></ion-input>
+	    </ion-item>
+	    <ion-item>
+	        <ion-label fixed>Input String 2:</ion-label>
+	        <ion-input  [(ngModel)]="_secondString"></ion-input>
+	    </ion-item>
+	</ion-list>
+
+	<button ion-button outline (click)="ConcatenationFunction()" class="add">Concatenation</button>
+	<button ion-button outline (click)="UppercaseFunction()" class="add">Uppercase </button>
+	<button ion-button outline (click)="LowercaseFunction()" class="add">Lowercase </button>
+	<button ion-button outline (click)="LongestWordFunction()" class="longword">Longest Word</button>
+	<button ion-button outline (click)="MakeListFunction()" class="longword">Make List</button>
+	<button ion-button outline (click)="SwapFirstLastCharsFunction()" class="swapchar">Swap Characters</button>
+	<button ion-button outline (click)="CheckEqualsFunction()" class="add">Check if equal</button>
+	
+	<ion-card>
+	    <ion-card-header>
+	    	String Manipulation Results: <p> New String: {{_manipulation}} <br/>
+	    </ion-card-header>
+		
+		<ion-card-content>
+	    	<p> First String is... {{_firstString || "Empty"}} </p>			
+	        <p> Second String is... {{_secondString || "Empty"}} </p>	
+			<br/>
+			<hr style="border-bottom: 1px solid #ccc;"/>	
+		    <p> Concatenation Function:  {{ GetInstantConcatenation() }} </p>
+			<p> UpperCase Function:  {{ GetInstantUppercase() }} </p>
+			<p> LowerCase Function:  {{ GetInstantLowercase() }} </p>
+			<p> Longest Word Function:  {{ GetInstantLongestWord() }} </p>
+			<p> Check If Equal Function:  {{ GetInstantCheckEquals() }} </p>
+			<p> Swap Characters Function:  {{ GetInstantSwapFirstLastChars() }} </p>
+			<p> Make Sentence List Function:  {{ GetInstantMakeList() }} </p>			
+
+			
+				
+	    </ion-card-content>	
+	</ion-card>
+</ion-content>
+
